@@ -22,4 +22,5 @@ module.exports = class extends Generator {
   install() {
     this.spawnCommandSync("npm", ["install"]);
   }
+  // testing git
 };
