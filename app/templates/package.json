@@ -1,12 +1,13 @@
 {
   "name": "<%= projectName %>",
   "version": "1.0.0",
-  "description": "A generic React website",
+  "description": "The official website for <%= projectName %>",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build"
   },
   "dependencies": {
+    "framer-motion": "^12.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",

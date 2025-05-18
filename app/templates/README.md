@@ -1,3 +1,3 @@
 # <%= projectName %>
 
-This is a basic React.js website generated using Yeoman.
+##This is a website for <%= projectName %> built by [Bayou Dev Co](https://www.bayoudevco.com)

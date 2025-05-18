@@ -5,3 +5,138 @@
 body {
     @apply bg-white text-gray-800;
 }
+
+@keyframes scroll-bounce {
+
+    0%,
+    100% {
+        transform: translateX(100%);
+    }
+
+    50% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-scroll-bounce {
+    display: inline-block;
+    animation: scroll-bounce 30s ease-in-out infinite;
+}
+
+.animate-scroll-bounce:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-scroll-left {
+    display: inline-block;
+    animation: scroll-left 20s linear infinite;
+    white-space: nowrap;
+}
+
+.animate-scroll-left:hover {
+    animation-play-state: paused;
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Star background with twinkling effect */
+
+.twinkling-bg {
+    background: url('https://www.transparenttextures.com/patterns/stardust.png'), radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    background-size: cover;
+    animation: twinkle 60s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Gradient background with twinkling effect */
+.gradient-bg {
+    background: linear-gradient(-45deg, #1b2735, #090a0f, #1b2735, #000000);
+    background-size: 400% 400%;
+    animation: gradientMove 30s ease infinite;
+}
+
+
+@keyframes synthwaveScroll {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Synthwave gradient background with twinkling effect */
+.synthwave-bg {
+    background: linear-gradient(-45deg, #ff0080, #7928ca, #2afadf, #ff9a8b);
+    background-size: 400% 400%;
+    animation: synthwaveScroll 30s ease infinite;
+}
+
+@keyframes synthwaveGradientMove {
+    0% {
+        background-position: 0% 50%, 0 0;
+    }
+
+    50% {
+        background-position: 100% 50%, 0 0;
+    }
+
+    100% {
+        background-position: 0% 50%, 0 0;
+    }
+}
+
+.gridme-bg {
+    background-image:
+        url('https://www.transparenttextures.com/patterns/grid-me.png'),
+        linear-gradient(-45deg, #ff0080, #7928ca, #2afadf, #ff9a8b);
+    background-size: auto, 400% 400%;
+    animation: synthwaveGradientMove 30s ease infinite;
+    background-repeat: repeat, no-repeat;
+}
+
+.parallax-bg {
+    background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1470&q=80');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
