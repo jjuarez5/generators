@@ -42,8 +42,8 @@
 
 // export default Header;
 
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -94,16 +94,22 @@ const Header = () => {
 
       {/* Mobile nav links */}
       {isOpen && (
-        <div className="md:hidden px-6 pb-4 space-y-2 bg-gray-900 bg-opacity-90">
+        <div className="md:hidden px-6 pb-4 space-y-2 bg-indigo-600 bg-opacity-90">
           <a
-            href="#landing"
-            className="block py-2 border-b border-gray-700 hover:bg-white hover:text-indigo-600 hover:shadow-[0_0_10px_#c084fc] rounded-md px-3 transition duration-300"
+            href="#"
+            className="block py-2 hover:bg-white hover:text-indigo-600 hover:shadow-[0_0_10px_#c084fc] rounded-md px-3 transition duration-300"
+          >
+            Home
+          </a>
+          <a
+            href="#about"
+            className="block py-2 hover:bg-white hover:text-indigo-600 hover:shadow-[0_0_10px_#c084fc] rounded-md px-3 transition duration-300"
           >
             About
           </a>
           <a
             href="#gallery"
-            className="block py-2 border-b border-gray-700 hover:bg-white hover:text-indigo-600 hover:shadow-[0_0_10px_#c084fc] rounded-md px-3 transition duration-300"
+            className="block py-2  hover:bg-white hover:text-indigo-600 hover:shadow-[0_0_10px_#c084fc] rounded-md px-3 transition duration-300"
           >
             Gallery
           </a>

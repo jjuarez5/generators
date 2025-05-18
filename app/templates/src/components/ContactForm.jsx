@@ -1,16 +1,33 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const ContactForm = () => (
-  <section id="contact" className="twinkling-bg py-24 px-4 sm:px-6 text-white border-t border-gray-200">
+  <section
+    id="contact"
+    className="bg-white py-24 px-4 sm:px-6 text-white border-t border-gray-200"
+  >
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="max-w-xl mx-auto bg-blue-700 backdrop-blur-md p-10 rounded-2xl shadow-xl border border-white/10"
+      className="max-w-xl mx-auto bg-indigo-700 backdrop-blur-md p-10 rounded-2xl shadow-xl border border-white/10"
     >
       <h2 className="text-4xl font-bold text-center mb-8">Contact</h2>
-      <form className="space-y-6" name="contact" method="post">
+      <form
+        className="space-y-6"
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+      >
+        {/* Hidden inputs for Netlify */}
+        <input type="hidden" name="form-name" value="contact" />
+        <p className="hidden">
+          <label>
+            Don’t fill this out if you're human: <input name="bot-field" />
+          </label>
+        </p>
+
         <input
           type="text"
           name="contactName"
@@ -36,7 +53,7 @@ const ContactForm = () => (
         />
         <button
           type="submit"
-          className="w-full py-3 rounded-lg bg-white text-blue-700 font-semibold hover:bg-blue-100 transition"
+          className="w-full py-3 rounded-lg bg-white text-indigo-700 font-semibold hover:bg-blue-100 transition"
         >
           Send Message
         </button>
